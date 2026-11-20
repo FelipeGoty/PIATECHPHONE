@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos | TECH PHONE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="header-superior">
+        <a href="index.html" class="logo">
+            📱 TECH<span class="logo-color">PHONE</span>
+        </a>
+        <a href="index.html" class="boton-secundario">VOLVER AL INICIO</a>
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="contacto.html" class="activo">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-texto">
+            <span class="etiqueta">ESTAMOS PARA AYUDARTE</span>
+            <h1>HABLEMOS <span>CONTIGO</span></h1>
+            <p>
+                ¿Tienes dudas sobre nuestros productos?
+                Escríbenos y conoce más sobre TECH PHONE.
+            </p>
+        </div>
+
+        <div class="hero-imagen">
+            <img src="https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?w=900"
+                 alt="Atención al cliente">
+        </div>
+    </section>
+
+    <section class="seccion-productos">
+
+        <div class="titulo-seccion">
+            <div>
+                <span class="subtitulo">CONTACTO</span>
+                <h2>Envíanos un mensaje</h2>
+                <p>Completa el siguiente formulario.</p>
+            </div>
+        </div>
+
+        <div class="contacto-contenedor">
+
+            <div class="contacto-informacion">
+                <h2>TECH PHONE</h2>
+                <p>Nos interesa conocer tus dudas y comentarios.</p>
+
+                <div class="dato-contacto">
+                    <span>📱</span>
+                    <div>
+                        <strong>Teléfono</strong>
+                        <p>Contacto de ejemplo: 55 0000 0000</p>
+                    </div>
+                </div>
+
+                <div class="dato-contacto">
+                    <span>✉️</span>
+                    <div>
+                        <strong>Correo</strong>
+                        <p>contacto@techphone.example</p>
+                    </div>
+                </div>
+
+                <div class="dato-contacto">
+                    <span>🕒</span>
+                    <div>
+                        <strong>Horario</strong>
+                        <p>Lunes a sábado, 10:00 a 19:00.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="formulario-contacto" id="formContacto">
+
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+                <label for="correo">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
+
+                <label for="asunto">Asunto</label>
+                <input
+                    type="text"
+                    id="asunto"
+                    placeholder="Motivo de tu mensaje"
+                    required
+                >
+
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                    id="mensaje"
+                    rows="5"
+                    placeholder="Escribe tu mensaje..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="boton-comprar">
+                    ENVIAR MENSAJE →
+                </button>
+
+                <p id="respuestaContacto" role="status"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-contenido">
+        <div>
+            <h2>📱 TECH<span>PHONE</span></h2>
+            <p>La tecnología que necesitas, al alcance de tu mano.</p>
+        </div>
+        <div>
+            <h3>Explora</h3>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+        </div>
+        <div>
+            <h3>Información</h3>
+            <a href="historia.html">Historia</a>
+            <a href="sucursales.html">Sucursales</a>
+        </div>
+    </div>
+    <p class="copyright">© 2026 TECH PHONE. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    document.getElementById("formContacto").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+
+        document.getElementById("respuestaContacto").textContent =
+            "¡Gracias, " + nombre + "! Tu mensaje fue registrado en esta demostración.";
+
+        this.reset();
+    });
+</script>
+
+</body>
+</html>

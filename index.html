@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TECH PHONE | Tienda de Celulares</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="encabezado">
+
+    <div class="header-superior">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">📱</span>
+            <span>TECH<span class="logo-color">PHONE</span></span>
+        </a>
+
+        <div class="buscador">
+            <input
+                type="text"
+                id="searchBar"
+                placeholder="¿Qué celular estás buscando?"
+            >
+            <button type="button" onclick="buscarCelulares()">⌕</button>
+        </div>
+
+        <button class="carrito" type="button" onclick="abrirCarrito()">
+            🛒 Mi carrito
+            <span id="contadorCarrito">0</span>
+        </button>
+
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="activo">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <!-- BANNER PRINCIPAL -->
+
+    <section class="hero">
+
+        <div class="hero-texto">
+
+            <span class="etiqueta">NUEVA GENERACIÓN TECNOLÓGICA</span>
+
+            <h1>
+                LA TECNOLOGÍA
+                <span>ESTÁ EN TUS MANOS</span>
+            </h1>
+
+            <p>
+                Descubre los smartphones más increíbles.
+                Tecnología, innovación y calidad en un solo lugar.
+            </p>
+
+            <a href="#productos" class="boton-principal">
+                EXPLORAR CATÁLOGO →
+            </a>
+
+            <div class="hero-datos">
+                <div>
+                    <strong>+20</strong>
+                    <span>Modelos</span>
+                </div>
+
+                <div>
+                    <strong>+10</strong>
+                    <span>Marcas</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Calidad</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero-imagen">
+            <img
+                src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=900&auto=format&fit=crop"
+                alt="Smartphone moderno"
+            >
+        </div>
+
+    </section>
+
+    <!-- MARCAS -->
+
+    <section class="marcas">
+        <h2>LAS MARCAS QUE TE ENCANTAN</h2>
+
+        <div class="marcas-lista">
+            <span>APPLE</span>
+            <span>SAMSUNG</span>
+            <span>XIAOMI</span>
+            <span>MOTOROLA</span>
+            <span>OPPO</span>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+
+    <section class="beneficios">
+
+        <div class="beneficio">
+            <span>🚚</span>
+            <div>
+                <h3>Envíos disponibles</h3>
+                <p>Recibe tus productos cómodamente.</p>
+            </div>
+        </div>
+
+        <div class="beneficio">
+            <span>🔒</span>
+            <div>
+                <h3>Compra segura</h3>
+                <p>Tu confianza es importante.</p>
+            </div>
+        </div>
+
+        <div class="beneficio">
+            <span>⭐</span>
+            <div>
+                <h3>Calidad garantizada</h3>
+                <p>Productos seleccionados.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PRODUCTOS -->
+
+    <section class="seccion-productos" id="productos">
+
+        <div class="titulo-seccion">
+            <div>
+                <span class="subtitulo">TECNOLOGÍA PARA TI</span>
+                <h2>Productos destacados</h2>
+                <p>Agrega tus celulares favoritos al carrito.</p>
+            </div>
+        </div>
+
+        <div id="destacados" class="productos-grid">
+
+            <article class="producto">
+
+                <span class="producto-etiqueta">DESTACADO</span>
+
+                <div class="producto-imagen">
+                    <img
+                        src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop"
+                        alt="iPhone"
+                    >
+                </div>
+
+                <span class="marca-producto">APPLE</span>
+                <h3>iPhone</h3>
+                <p>Diseño elegante y gran rendimiento.</p>
+                <strong class="precio">$14,999 MXN</strong>
+
+                <button type="button" onclick="agregarCarrito(1)">
+                    🛒 Agregar al carrito
+                </button>
+
+            </article>
+
+            <article class="producto">
+
+                <span class="producto-etiqueta">POPULAR</span>
+
+                <div class="producto-imagen">
+                    <img
+                        src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&auto=format&fit=crop"
+                        alt="Samsung Galaxy"
+                    >
+                </div>
+
+                <span class="marca-producto">SAMSUNG</span>
+                <h3>Samsung Galaxy</h3>
+                <p>Pantalla increíble y gran potencia.</p>
+                <strong class="precio">$11,499 MXN</strong>
+
+                <button type="button" onclick="agregarCarrito(2)">
+                    🛒 Agregar al carrito
+                </button>
+
+            </article>
+
+            <article class="producto">
+
+                <span class="producto-etiqueta">NUEVO</span>
+
+                <div class="producto-imagen">
+                    <img
+                        src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop"
+                        alt="Xiaomi Redmi"
+                    >
+                </div>
+
+                <span class="marca-producto">XIAOMI</span>
+                <h3>Xiaomi Redmi</h3>
+                <p>Excelente tecnología y rendimiento.</p>
+                <strong class="precio">$6,499 MXN</strong>
+
+                <button type="button" onclick="agregarCarrito(3)">
+                    🛒 Agregar al carrito
+                </button>
+
+            </article>
+
+        </div>
+
+        <p id="mensajeBusqueda"></p>
+
+    </section>
+
+    <!-- PROMOCIÓN -->
+
+    <section class="promocion">
+
+        <div>
+            <span>OFERTAS ESPECIALES</span>
+            <h2>¡Renueva tu celular!</h2>
+
+            <p>
+                Encuentra increíbles opciones para llevar
+                tu experiencia tecnológica al siguiente nivel.
+            </p>
+
+            <a href="promociones.html">VER PROMOCIONES →</a>
+        </div>
+
+        <div class="promocion-icono">📱</div>
+
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+
+    <section class="descripcion">
+
+        <div class="descripcion-imagen">
+            <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=700&auto=format&fit=crop"
+                alt="Tecnología móvil"
+            >
+        </div>
+
+        <div class="descripcion-texto">
+
+            <span class="subtitulo">CONÓCENOS</span>
+
+            <h2>La tecnología que necesitas, al alcance de tu mano.</h2>
+
+            <p>
+                Somos una tienda especializada en teléfonos celulares
+                de las mejores marcas. Ofrecemos calidad, variedad
+                e innovación.
+            </p>
+
+            <a href="historia.html" class="boton-secundario">
+                CONOCE NUESTRA HISTORIA
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- VENTANA DEL CARRITO -->
+
+<div class="fondo-carrito" id="fondoCarrito" onclick="cerrarCarrito()">
+
+    <section
+        class="panel-carrito"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloCarrito"
+        onclick="event.stopPropagation()"
+    >
+
+        <div class="carrito-encabezado">
+
+            <h2 id="tituloCarrito">🛒 Mi carrito</h2>
+
+            <button
+                class="cerrar-carrito"
+                type="button"
+                onclick="cerrarCarrito()"
+                aria-label="Cerrar carrito"
+            >×</button>
+
+        </div>
+
+        <div id="listaCarrito" class="lista-carrito">
+            <!-- Productos generados por JavaScript -->
+        </div>
+
+        <div class="carrito-vacio" id="carritoVacio">
+            <span>🛍️</span>
+            <h3>Tu carrito está vacío</h3>
+            <p>¡Agrega tus celulares favoritos!</p>
+
+            <button type="button" onclick="cerrarCarrito()">
+                Seguir comprando
+            </button>
+        </div>
+
+        <div class="carrito-resumen" id="carritoResumen">
+
+            <div class="resumen-linea">
+                <span>Productos:</span>
+                <strong id="totalUnidades">0</strong>
+            </div>
+
+            <div class="resumen-linea">
+                <span>Subtotal:</span>
+                <strong id="subtotalCarrito">$0 MXN</strong>
+            </div>
+
+            <div class="resumen-linea">
+                <span>Envío:</span>
+                <strong>Gratis</strong>
+            </div>
+
+            <div class="resumen-total">
+                <span>TOTAL:</span>
+                <strong id="totalCarrito">$0 MXN</strong>
+            </div>
+
+            <button
+                type="button"
+                class="boton-comprar"
+                onclick="finalizarCompra()"
+            >
+                FINALIZAR COMPRA →
+            </button>
+
+            <button
+                type="button"
+                class="vaciar-carrito"
+                onclick="vaciarCarrito()"
+            >
+                Vaciar carrito
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- INTEGRANTES DEL EQUIPO -->
+
+<section class="equipo">
+
+    <div class="equipo-encabezado">
+        <span class="subtitulo">CONOCE A NUESTRO EQUIPO</span>
+        <h2>¡Somos el equipo TECH PHONE!</h2>
+        <p>
+            Este proyecto fue realizado con creatividad,
+            esfuerzo y trabajo en equipo.
+        </p>
+    </div>
+
+    <div class="equipo-grid">
+
+        <div class="integrante">
+            <div class="integrante-icono"></div>
+            <h3>Greisi Sarai Sanchez Salazar</h3>
+            <span>Integrante del equipo</span>
+        </div>
+
+        <div class="integrante">
+            <div class="integrante-icono"></div>
+            <h3>Gael Vazquez Bravo</h3>
+            <span>Integrante del equipo</span>
+        </div>
+
+        <div class="integrante">
+            <div class="integrante-icono"></div>
+            <h3>Luis Carlos Solis Martinez</h3>
+            <span>Integrante del equipo</span>
+        </div>
+
+        <div class="integrante">
+            <div class="integrante-icono"></div>
+            <h3>Leonardo Maximiliano Leal Perez</h3>
+            <span>Integrante del equipo</span>
+        </div>
+
+    </div>
+
+    <div class="equipo-mensaje">
+        <h3>¡Juntos hacemos posible TECH PHONE! 📱</h3>
+        <p>La unión, las ideas y el esfuerzo hacen grandes proyectos.</p>
+    </div>
+
+</section>
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+
+    <div class="footer-contenido">
+
+        <div>
+            <h2>📱 TECH<span>PHONE</span></h2>
+            <p>La tecnología que necesitas, al alcance de tu mano.</p>
+        </div>
+
+        <div>
+            <h3>Explora</h3>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="promociones.html">Promociones</a>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <a href="historia.html">Historia</a>
+            <a href="sucursales.html">Sucursales</a>
+            <a href="contacto.html">Contáctanos</a>
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 TECH PHONE. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+</body>
+</html>
